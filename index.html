@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAN — Personal Space</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #09070d;
+  color: #f7edf8;
+  font-family: -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+body:before {
+  content: "";
+  position: fixed;
+  width: 330px;
+  height: 330px;
+  background: #76134f;
+  filter: blur(130px);
+  opacity: .35;
+  top: 15%;
+  left: 10%;
+  pointer-events: none;
+}
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: auto;
+  padding: 28px 22px 60px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #c5a8c8;
+}
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 5px;
+  color: white;
+}
+.hero {
+  padding: 115px 0 75px;
+}
+.tag {
+  color: #c47baf;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+h1 {
+  font-size: clamp(65px, 17vw, 120px);
+  letter-spacing: -7px;
+  line-height: .9;
+  margin: 24px 0;
+}
+h1 span {
+  color: #b64b91;
+}
+.subtitle {
+  color: #b5a9ba;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 350px;
+}
+.card {
+  background: linear-gradient(135deg,#1c101e,#100d16);
+  border: 1px solid #44243f;
+  border-radius: 20px;
+  padding: 25px;
+  margin-top: 20px;
+}
+.card h2 { font-size: 20px; }
+.card p {
+  color: #b5a9ba;
+  line-height: 1.7;
+  font-size: 14px;
+}
+button {
+  background: #762c65;
+  border: 1px solid #a74b91;
+  color: white;
+  padding: 14px 22px;
+  border-radius: 30px;
+  margin-top: 15px;
+  font-size: 13px;
+}
+button:active { transform: scale(.96); }
+footer {
+  color: #766879;
+  font-size: 11px;
+  text-align: center;
+  margin-top: 75px;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+<body>
+<main>
+  <nav>
+    <div class="logo">JAN.</div>
+    <div>PERSONAL SPACE · 2026</div>
+  </nav>
+
+  <section class="hero">
+    <div class="tag">WELCOME TO MY WORLD</div>
+    <h1>JUST<br><span>JAN.</span></h1>
+    <p class="subtitle">
+      A little corner of the internet.
+      My space, my ideas, my universe.
+    </p>
+    <button onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      EXPLORE MY SPACE ↓
+    </button>
+  </section>
+
+  <section class="card" id="about">
+    <div class="tag">01 / ABOUT</div>
+    <h2>A little about me.</h2>
+    <p>
+      This is my personal space.
+      A place to experiment, create and
+      express myself.
+    </p>
+  </section>
+
+  <section class="card">
+    <div class="tag">02 / DISCOVER</div>
+    <h2>Something new.</h2>
+    <p>
+      This website is just beginning.
+      More things are coming soon.
+    </p>
+    <button onclick="alert('Welcome to my world!')">
+      CLICK ME ✦
+    </button>
+  </section>
+
+  <footer>MADE WITH CURIOSITY · JAN © 2026</footer>
+</main>
+</body>
+</html>
